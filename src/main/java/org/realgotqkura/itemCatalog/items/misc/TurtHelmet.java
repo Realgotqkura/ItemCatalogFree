@@ -9,40 +9,41 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.realgotqkura.itemCatalog.ItemCatalog;
 import org.realgotqkura.itemCatalog.utilities.RandomUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WaterHelmet implements Listener {
+public class TurtHelmet implements Listener {
 
     private ItemCatalog plugin;
     private static int customModelDataNum;
 
-    public WaterHelmet(ItemCatalog plugin){
+    public TurtHelmet(ItemCatalog plugin){
         this.plugin = plugin;
-        customModelDataNum = plugin.getConfig().getInt("customModelData.infernoStaff");
+        customModelDataNum = plugin.getConfig().getInt("customModelData.turtHelmet");
     }
 
 
     public static ItemStack item(){
         ItemStack stack = new ItemStack(Material.TURTLE_HELMET);
         ItemMeta meta = stack.getItemMeta();
-        meta.setDisplayName(RandomUtils.safeHexColor("#ff6017", "Water Helmet"));
+        meta.setDisplayName(RandomUtils.safeHexColor("#58a37b", "Turt Helmet"));
         List<String> lore = new ArrayList<>();
-        lore.add(RandomUtils.color("&8A Staff straight from Hell"));
+        lore.add(RandomUtils.color("&8Just wearing a turtle shell lmao"));
         lore.add("");
-        lore.add(RandomUtils.color("&e&lRIGHT CLICK &6Fireball"));
-        lore.add(RandomUtils.color("&7Shoots a Fireball"));
-        lore.add(RandomUtils.color("&7Cooldown: &a3&7s"));
+        lore.add(RandomUtils.color("&e&lWHEN WORN &6Water Breathing"));
+        lore.add(RandomUtils.color("&7Gives permanent water breathing"));
         meta.setLore(lore);
         meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         meta.addItemFlags(ItemFlag.HIDE_ADDITIONAL_TOOLTIP);
         meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         meta.setUnbreakable(true);
         meta.setCustomModelData(customModelDataNum);
-        meta.getPersistentDataContainer().set(RandomUtils.nskContainer.get("ItemCatalogID"), PersistentDataType.STRING, "WaterHelmet");
+        meta.getPersistentDataContainer().set(RandomUtils.nskContainer.get("ItemCatalogID"), PersistentDataType.STRING, "TurtHelmet");
         stack.setItemMeta(meta);
         return stack;
     }
@@ -51,6 +52,10 @@ public class WaterHelmet implements Listener {
     public void move(PlayerMoveEvent event){
         Player player = event.getPlayer();
 
-        if(!RandomUtils.passedItemChecks())
+        if(!RandomUtils.passedItemChecks(player.getEquipment().getHelmet(), "TurtHelmet"))
+            return;
+
+        player.addPotionEffect(new PotionEffect(PotionEffectType.WATER_BREATHING, 20*20, 0, false, false, true));
+
     }
 }

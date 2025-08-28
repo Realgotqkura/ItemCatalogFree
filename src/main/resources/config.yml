@@ -1,0 +1,22 @@
+#Used for texture packs
+customModelData:
+  heavySword: 0
+  enderSword: 1
+  vampireDagger: 2
+  rabbitBoots: 3
+  hastyPickaxe: 4
+  snowWand: 5
+  lumberjackAxe: 6
+  torchOfLight: 7
+  endermanSword: 8
+  guardianShield: 9
+  zephyrBow: 10
+  speedyBoots: 11
+  infernoStaff: 12
+  harvesterHoe: 13
+  turtHelmet: 14
+  poisonFang: 15
+  stormBringer: 16
+  chickenWings: 17
+  primitiveShadowWand: 18
+  golemUnderwear: 19

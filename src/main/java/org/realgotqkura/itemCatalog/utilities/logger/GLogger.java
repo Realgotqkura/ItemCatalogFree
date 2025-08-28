@@ -1,4 +1,4 @@
-package org.realgotqkura.itemCatalog.utilities;
+package org.realgotqkura.itemCatalog.utilities.logger;
 
 import org.bukkit.Bukkit;
 

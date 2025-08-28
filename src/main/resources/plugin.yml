@@ -1,4 +1,12 @@
 name: ItemCatalog
 version: '1.0-SNAPSHOT'
 main: org.realgotqkura.itemCatalog.ItemCatalog
-api-version: '1.21'
+api-version: '1.16'
+
+commands:
+  itemcatalog:
+    description: Opens the gui for ItemCatalog
+    permission: ItemCatalog.op
+  itcat_debug:
+    description: The debug command for ItemCatalog
+    permission: ItemCatalog.op
