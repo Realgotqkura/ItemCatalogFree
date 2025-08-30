@@ -1,5 +1,5 @@
 name: ItemCatalog
-version: '1.0-SNAPSHOT'
+version: '1.01'
 main: org.realgotqkura.itemCatalog.ItemCatalog
 api-version: '1.16'
 
