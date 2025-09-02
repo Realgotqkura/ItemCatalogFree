@@ -10,6 +10,7 @@ import org.realgotqkura.itemCatalog.guis.InitialGUI;
 import org.realgotqkura.itemCatalog.guis.MiscItemsGUI;
 import org.realgotqkura.itemCatalog.items.ItemsManager;
 import org.realgotqkura.itemCatalog.utilities.RandomUtils;
+import org.realgotqkura.itemCatalog.utilities.data.DataUtils;
 import org.realgotqkura.itemCatalog.utilities.data.PlayerDataConfig;
 import org.realgotqkura.itemCatalog.utilities.logger.GLogger;
 import org.realgotqkura.itemCatalog.utilities.logger.GLoggerSeverity;
@@ -28,6 +29,9 @@ public final class ItemCatalog extends JavaPlugin {
         RandomUtils.loadNskContainer(this);
         ItemsManager.loadItems();
         ItemsManager.loadItemEvents(this);
+
+        DataUtils utils = new DataUtils();
+        utils.loadCustomData(this);
 
         registerGuiEvents();
         registerCommands();

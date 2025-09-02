@@ -39,6 +39,8 @@ public class ItemsManager {
         combatItems.add(Stormbringer.item());
         combatItems.add(GolemUnderwear.item());
         combatItems.add(EchoBow.item());
+        combatItems.add(FlameSword.item());
+        combatItems.add(SandstormDagger.item());
     }
 
     private static void loadMiscItems(){
@@ -52,6 +54,7 @@ public class ItemsManager {
         miscItems.add(ChickenWings.item());
         miscItems.add(PrimitiveShadowWand.item());
         miscItems.add(ChronoClock.item());
+        miscItems.add(GiantHammer.item());
     }
 
 
@@ -78,6 +81,9 @@ public class ItemsManager {
         plugin.getServer().getPluginManager().registerEvents(new GolemUnderwear(plugin), plugin);
         plugin.getServer().getPluginManager().registerEvents(new ChronoClock(plugin), plugin);
         plugin.getServer().getPluginManager().registerEvents(new EchoBow(plugin), plugin);
+        plugin.getServer().getPluginManager().registerEvents(new GiantHammer(plugin), plugin);
+        plugin.getServer().getPluginManager().registerEvents(new FlameSword(plugin), plugin);
+        plugin.getServer().getPluginManager().registerEvents(new SandstormDagger(plugin), plugin);
     }
 
 }
