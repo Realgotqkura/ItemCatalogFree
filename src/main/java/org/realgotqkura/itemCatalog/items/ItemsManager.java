@@ -41,6 +41,7 @@ public class ItemsManager {
         combatItems.add(EchoBow.item());
         combatItems.add(FlameSword.item());
         combatItems.add(SandstormDagger.item());
+        combatItems.add(EchoBlade.item());
     }
 
     private static void loadMiscItems(){
@@ -84,6 +85,7 @@ public class ItemsManager {
         plugin.getServer().getPluginManager().registerEvents(new GiantHammer(plugin), plugin);
         plugin.getServer().getPluginManager().registerEvents(new FlameSword(plugin), plugin);
         plugin.getServer().getPluginManager().registerEvents(new SandstormDagger(plugin), plugin);
+        plugin.getServer().getPluginManager().registerEvents(new EchoBlade(plugin), plugin);
     }
 
 }

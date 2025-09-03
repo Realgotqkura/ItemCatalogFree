@@ -10,6 +10,7 @@ public class DataUtils {
         checkIntIfNull(plugin, "customModelData.giantHammer", 26);
         checkIntIfNull(plugin, "customModelData.flameSword", 20);
         checkIntIfNull(plugin, "customModelData.sandstormDagger", 27);
+        checkIntIfNull(plugin, "customModelData.echoBlade", 34);
     }
 
     private static void checkIntIfNull(ItemCatalog plugin, String configLine, int defaultValue) {
